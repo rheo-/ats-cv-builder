@@ -1,0 +1,143 @@
+.cv {
+  width: 210mm;
+  min-height: 297mm;
+  box-sizing: border-box;
+
+  padding: 18mm;
+
+  background: #ffffff;
+  color: #111111;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10.5pt;
+  line-height: 1.4;
+}
+
+/* Header */
+
+.cv-header {
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.cv-header h1 {
+  margin: 0 0 6px;
+
+  font-size: 24pt;
+  font-weight: 700;
+}
+
+.cv-contact {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0;
+  font-size: 9.5pt;
+}
+
+.cv-contact span:not(:last-child)::after {
+  content: " | ";
+  margin: 0 5px;
+}
+
+/* Sections */
+
+.cv-section {
+  margin-top: 16px;
+}
+
+.cv-section h2 {
+  margin: 0 0 7px;
+
+  padding-bottom: 3px;
+
+  border-bottom: 1px solid #222222;
+
+  font-size: 11pt;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.cv-section p {
+  margin: 0;
+}
+
+/* Experience */
+
+.experience-item {
+  margin-bottom: 13px;
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  gap: 20px;
+}
+
+.experience-item h3,
+.education-item h3,
+.project-item h3 {
+  margin: 0;
+
+  font-size: 10.5pt;
+  font-weight: 700;
+}
+
+.company,
+.institution,
+.technologies {
+  font-size: 10pt;
+}
+
+.date {
+  flex-shrink: 0;
+  text-align: right;
+  font-size: 9.5pt;
+}
+
+/* Lists */
+
+.cv ul {
+  margin: 5px 0 0;
+  padding-left: 18px;
+}
+
+.cv li {
+  margin-bottom: 3px;
+}
+
+/* Education */
+
+.education-item {
+  margin-bottom: 10px;
+}
+
+/* Projects */
+
+.project-item {
+  margin-bottom: 12px;
+}
+
+/* Printing */
+
+@media print {
+  .cv {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 0;
+    padding: 18mm;
+  }
+
+  .cv-section,
+  .experience-item,
+  .education-item,
+  .project-item {
+    break-inside: avoid;
+  }
+
+  .cv-section h2 {
+    break-after: avoid;
+  }
+}
